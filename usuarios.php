@@ -38,6 +38,7 @@
 			<div class="col-md-3">
 				<br>
 				<a class="btn btn-secondary" href="items.php"> CRUD Items</a>
+				<a class="btn btn-secondary" href="kardex/kardex.php">Kardex</a>
 			</div>
 			<div class="col-md-6">				
 				<h2>Gestion de Usuarios</h2>
@@ -116,7 +117,7 @@
 											<label> Usuario:</label>
 										</div>
 										<div class="col-md-7">
-											<input type="text" class="form-control" name="usuario">
+											<input type="text" class="form-control" name="usuario" required="true">
 										</div>
 										
 									</div>
@@ -126,7 +127,7 @@
 											<label>clave:</label>
 										</div>
 										<div class="col-md-7">
-											<input type="text" class="form-control" name="clave">
+											<input type="text" class="form-control" name="clave" required="true">
 										</div>										
 									</div>
 									<br>
@@ -135,7 +136,7 @@
 											<label>nombre:</label>
 										</div>
 										<div class="col-md-7">
-											<input type="text" class="form-control" name="nombres">
+											<input type="text" class="form-control" name="nombres" required="true">
 										</div>										
 									</div>
 									<br>
@@ -153,7 +154,7 @@
 											<label>Apellido Materno:</label>
 										</div>
 										<div class="col-md-7">
-												<input type="text" class="form-control" name="materno">
+												<input type="text" class="form-control" name="materno" required="true">
 										</div>										
 									</div>	
 									<br>

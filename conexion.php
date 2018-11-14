@@ -7,12 +7,12 @@
 
 //esto no se cambia
 
-    $conn=pg_connect("host=$host dbname=$dbname user=$username password=$password") or die ("no se pudo conectar a la base de datos");
+    $conn = pg_connect("host=$host dbname=$dbname user=$username password=$password") or die ("no se pudo conectar a la base de datos");
 
 
     if ($conn) {
        // echo "se conecto a la base de datos";
     }
 
-   // pg_close($conn);
+    //pg_close($conn);
 ?>

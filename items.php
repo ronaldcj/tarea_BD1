@@ -17,7 +17,18 @@
 	$ubicacion=$_POST['ubicacion']; 
 	//funcion de busqueda
 	$result= pg_query($conn, "SELECT alm.sel_by_page_items('$codigo','','','','') "); 
-	$res_busqueda = pg_fetch_array($result, null, PGSQL_ASSOC);
+	//$res_busqueda = pg_fetch_array($result, null, PGSQL_ASSOC);
+	list($res_busqueda) = pg_fetch_array($result);
+	echo $res_busqueda [0];
+	$res2 = pg_query("FETCH ALL FROM oCursor");
+	if ($res2 !== false) {
+		$all  = pg_fetch_all($res2);
+		print_r($all);
+	}
+
+
+
+
 	echo $res_busqueda['codigo'];
 	}
 	else{
@@ -44,6 +55,11 @@
 			<div class="col-md-3">
 				<br>
 				<a class="btn btn-secondary" href="usuarios.php"> CRUD Usuarios</a>
+				<a class="btn btn-secondary" href="kardex/kardex.php">Kardex</a>
+				<br>
+				<br>
+				<a class="btn btn-success" href="kardexIngreso.php">Registrar Ingreso</a>
+				<a class="btn btn-warning" href="kardexSalida.php">Registrar Salida</a>
 			</div>
 			<div class="col-md-6">				
 				<h2>Gestion de Items</h2>
